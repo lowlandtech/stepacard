@@ -10,7 +10,7 @@
       },
       "root": "apps/stepacard",
       "sourceRoot": "apps/stepacard/src",
-      "prefix": "lowlandtech",
+      "prefix": "llt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
