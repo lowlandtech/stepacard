@@ -1,0 +1,23 @@
+{
+  "files.exclude": {
+    "package-lock.json": true,
+    "jest.config.js": true,
+    "tslint.json": true,
+    ".prettierrc": true,
+    ".prettierignore": true,
+    ".gitignore": true,
+    ".editorconfig": true,
+    "node_modules": true,
+    "tools": true,
+    "decorate-angular-cli.js": true,
+    "apps/stepacard/.browserslistrc": true,
+    "apps/stepacard/jest.config.js": true,
+    "apps/stepacard/tsconfig.json": true,
+    "apps/stepacard/tsconfig.app.json": true,
+    "apps/stepacard/tsconfig.spec.json": true,
+    "apps/stepacard/tslint.json": true,
+    "apps/stepacard/src/main.ts": true,
+    "apps/stepacard/src/polyfills.ts": true,
+    "apps/stepacard/src/test-setup.ts": true
+  }
+}
