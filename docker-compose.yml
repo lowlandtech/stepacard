@@ -1,0 +1,22 @@
+version: '3.4'
+
+networks:
+  default:
+    external:
+        name: network_default
+
+services:
+  stepacard_app:
+    container_name: stepacard
+    image: lowlandtech/stepacard/app:latest
+    build:
+      context: .
+    environment:
+    - VIRTUAL_HOST=stepacard.com
+    - LETSENCRYPT_HOST=stepacard.com
+    - LETSENCRYPT_EMAIL=wmuntslag@live.nl
+    restart: always
+    expose:
+    - 80
+    labels:
+    - com.centurylinklabs.watchtower.enable='true'
