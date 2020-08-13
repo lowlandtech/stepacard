@@ -19,6 +19,7 @@
     "apps/stepacard/src/main.ts": true,
     "apps/stepacard/src/polyfills.ts": true,
     "apps/stepacard/src/test-setup.ts": true,
-    "nginx": true
+    "nginx": true,
+    ".dockerignore": true
   }
 }
