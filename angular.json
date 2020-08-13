@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "projects": {
+    "stepacard": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/stepacard",
+      "sourceRoot": "apps/stepacard/src",
+      "prefix": "lowlandtech",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/stepacard",
+            "index": "apps/stepacard/src/index.html",
+            "main": "apps/stepacard/src/main.ts",
+            "polyfills": "apps/stepacard/src/polyfills.ts",
+            "tsConfig": "apps/stepacard/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/stepacard/src/favicon.ico",
+              "apps/stepacard/src/assets"
+            ],
+            "styles": ["apps/stepacard/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/stepacard/src/environments/environment.ts",
+                  "with": "apps/stepacard/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "stepacard:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "stepacard:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "stepacard:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/stepacard/tsconfig.app.json",
+              "apps/stepacard/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/stepacard/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/stepacard/jest.config.js",
+            "tsConfig": "apps/stepacard/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/stepacard/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "stepacard-e2e": {
+      "root": "apps/stepacard-e2e",
+      "sourceRoot": "apps/stepacard-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/stepacard-e2e/cypress.json",
+            "tsConfig": "apps/stepacard-e2e/tsconfig.e2e.json",
+            "devServerTarget": "stepacard:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "stepacard:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/stepacard-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/stepacard-e2e/**/*"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
+  },
+  "schematics": {
+    "@nrwl/workspace": {
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/cypress": {
+      "cypress-project": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/node": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/nest": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/express": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "stepacard"
+}
