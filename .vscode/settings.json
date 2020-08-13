@@ -18,6 +18,7 @@
     "apps/stepacard/tslint.json": true,
     "apps/stepacard/src/main.ts": true,
     "apps/stepacard/src/polyfills.ts": true,
-    "apps/stepacard/src/test-setup.ts": true
+    "apps/stepacard/src/test-setup.ts": true,
+    "nginx": true
   }
 }
