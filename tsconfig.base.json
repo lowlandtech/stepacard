@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@lowlandtech/*": ["libs/*"],
+      "@default/*": ["apps/stepacard/src/app/*"],
+      "@env/*": ["apps/stepacard/src/environments/*"],
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
