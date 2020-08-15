@@ -26,7 +26,8 @@ export class SidebarNavComponent {
     return item.divider ? true : false
   }
 
-  public isTitle(item: { title: any; }) {
+  public isTitle(item: any) {
+    item.isUser = item.name === 'User';
     return item.title ? true : false
   }
 }
