@@ -28,6 +28,84 @@
     "stepacard-e2e": {
       "tags": [],
       "implicitDependencies": ["stepacard"]
+    },
+    "theme": {
+      "tags": []
+    },
+    "api": {
+      "tags": [
+        "api"
+      ]
+    },
+    "card": {
+      "tags": [
+        "card"
+      ]
+    },
+    "card-list": {
+      "tags": [
+        "card-list"
+      ]
+    },
+    "auth": {
+      "tags": [
+        "auth"
+      ]
+    },
+    "editor": {
+      "tags": [
+        "editor"
+      ]
+    },
+    "home": {
+      "tags": [
+        "home"
+      ]
+    },
+    "ngrx-error": {
+      "tags": [
+        "ngrx-error"
+      ]
+    },
+    "ngrx-forms": {
+      "tags": [
+        "ngrx-forms"
+      ]
+    },
+    "profile": {
+      "tags": [
+        "profile"
+      ]
+    },
+    "ngrx-router": {
+      "tags": [
+        "ngrx-router"
+      ]
+    },
+    "settings": {
+      "tags": [
+        "settings"
+      ]
+    },
+    "shared": {
+      "tags": [
+        "shared"
+      ]
+    },
+    "admin": {
+      "tags": []
+    },
+    "playground": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    },
+    "ui-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "ui"
+      ]
     }
   }
 }
