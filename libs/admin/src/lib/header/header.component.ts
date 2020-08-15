@@ -6,8 +6,8 @@ import { AdminStateFacade } from '../+state/facades/admin.facade';
   template: `
     <button class="navbar-toggler" type="button" scxMobileSidebarToggler></button>
     <a class="navbar-brand" [class]="{'navbar-brand-minimized': isMinimized}" href="#">
-      <span class=" raised-button small-logo text-primary">CS</span>
-      <span class="logo" *ngIf="isShowing">Spotacard</span>
+      <span class=" raised-button small-logo text-primary">SC</span>
+      <span class="logo" *ngIf="isShowing">Stepacard</span>
     </a>
     <button class="navbar-toggler" type="button" scxSidebarToggler></button>
     <ng-content></ng-content>
