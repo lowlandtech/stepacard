@@ -1,7 +1,10 @@
 {
   "extends": "../../tslint.json",
   "rules": {
-    "directive-selector": [true, "attribute", "scxUi", "camelCase"],
-    "component-selector": [true, "element", "scx-ui", "kebab-case"]
+    "directive-selector": [true, "attribute", "llt", "camelCase"],
+    "component-selector": [true, "element", "llt", "kebab-case"]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
   }
 }

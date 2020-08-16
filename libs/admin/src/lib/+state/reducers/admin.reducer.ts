@@ -18,7 +18,7 @@ export interface SidebarState {
 }
 export interface AsideState {
   hidden: boolean;
-  groups?: AsideListGroupModel[];
+  groups: AsideListGroupModel[];
   groupCount?: number;
 }
 export interface ProfileState {
