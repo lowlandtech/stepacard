@@ -150,10 +150,7 @@
               "libs/theme/tsconfig.lib.json",
               "libs/theme/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/theme/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/theme/**"]
           }
         },
         "test": {
@@ -191,10 +188,7 @@
               "libs/api/tsconfig.lib.json",
               "libs/api/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/api/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/api/**"]
           }
         },
         "test": {
@@ -232,10 +226,7 @@
               "libs/card-list/tsconfig.lib.json",
               "libs/card-list/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/card-list/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/card-list/**"]
           }
         },
         "test": {
@@ -273,10 +264,7 @@
               "libs/card/tsconfig.lib.json",
               "libs/card/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/card/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/card/**"]
           }
         },
         "test": {
@@ -314,10 +302,7 @@
               "libs/auth/tsconfig.lib.json",
               "libs/auth/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/auth/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/auth/**"]
           }
         },
         "test": {
@@ -355,10 +340,7 @@
               "libs/editor/tsconfig.lib.json",
               "libs/editor/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/editor/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/editor/**"]
           }
         },
         "test": {
@@ -396,10 +378,7 @@
               "libs/home/tsconfig.lib.json",
               "libs/home/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/home/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/home/**"]
           }
         },
         "test": {
@@ -437,10 +416,7 @@
               "libs/ngrx-error/tsconfig.lib.json",
               "libs/ngrx-error/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/ngrx-error/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/ngrx-error/**"]
           }
         },
         "test": {
@@ -478,10 +454,7 @@
               "libs/ngrx-forms/tsconfig.lib.json",
               "libs/ngrx-forms/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/ngrx-forms/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/ngrx-forms/**"]
           }
         },
         "test": {
@@ -519,10 +492,7 @@
               "libs/ngrx-router/tsconfig.lib.json",
               "libs/ngrx-router/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/ngrx-router/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/ngrx-router/**"]
           }
         },
         "test": {
@@ -560,10 +530,7 @@
               "libs/profile/tsconfig.lib.json",
               "libs/profile/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/profile/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/profile/**"]
           }
         },
         "test": {
@@ -601,10 +568,7 @@
               "libs/settings/tsconfig.lib.json",
               "libs/settings/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/settings/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/settings/**"]
           }
         },
         "test": {
@@ -642,10 +606,7 @@
               "libs/shared/tsconfig.lib.json",
               "libs/shared/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/shared/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/shared/**"]
           }
         },
         "test": {
@@ -654,52 +615,6 @@
             "jestConfig": "libs/shared/jest.config.js",
             "tsConfig": "libs/shared/tsconfig.spec.json",
             "setupFile": "libs/shared/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
-    "admin": {
-      "projectType": "library",
-      "root": "libs/admin",
-      "sourceRoot": "libs/admin/src",
-      "prefix": "scx",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/admin/tsconfig.lib.json",
-            "project": "libs/admin/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/admin/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/admin/tsconfig.lib.json",
-              "libs/admin/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/admin/**"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/admin/jest.config.js",
-            "tsConfig": "libs/admin/tsconfig.spec.json",
-            "setupFile": "libs/admin/src/test-setup.ts"
           }
         }
       },
@@ -734,10 +649,7 @@
               "libs/playground/tsconfig.lib.json",
               "libs/playground/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/playground/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/playground/**"]
           }
         },
         "test": {
@@ -780,10 +692,7 @@
               "libs/ui/tsconfig.lib.json",
               "libs/ui/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/ui/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/ui/**"]
           }
         },
         "test": {
@@ -852,14 +761,53 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/ui-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/ui-e2e/**"
-            ]
+            "tsConfig": ["apps/ui-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/ui-e2e/**"]
           }
+        }
+      }
+    },
+    "admin": {
+      "projectType": "library",
+      "root": "libs/admin",
+      "sourceRoot": "libs/admin/src",
+      "prefix": "llt",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/admin/tsconfig.lib.json",
+            "project": "libs/admin/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/admin/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/admin/tsconfig.lib.json",
+              "libs/admin/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/admin/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/admin/jest.config.js",
+            "tsConfig": "libs/admin/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/admin/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
         }
       }
     }

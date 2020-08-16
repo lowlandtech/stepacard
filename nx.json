@@ -33,67 +33,40 @@
       "tags": []
     },
     "api": {
-      "tags": [
-        "api"
-      ]
+      "tags": ["api"]
     },
     "card": {
-      "tags": [
-        "card"
-      ]
+      "tags": ["card"]
     },
     "card-list": {
-      "tags": [
-        "card-list"
-      ]
+      "tags": ["card-list"]
     },
     "auth": {
-      "tags": [
-        "auth"
-      ]
+      "tags": ["auth"]
     },
     "editor": {
-      "tags": [
-        "editor"
-      ]
+      "tags": ["editor"]
     },
     "home": {
-      "tags": [
-        "home"
-      ]
+      "tags": ["home"]
     },
     "ngrx-error": {
-      "tags": [
-        "ngrx-error"
-      ]
+      "tags": ["ngrx-error"]
     },
     "ngrx-forms": {
-      "tags": [
-        "ngrx-forms"
-      ]
+      "tags": ["ngrx-forms"]
     },
     "profile": {
-      "tags": [
-        "profile"
-      ]
+      "tags": ["profile"]
     },
     "ngrx-router": {
-      "tags": [
-        "ngrx-router"
-      ]
+      "tags": ["ngrx-router"]
     },
     "settings": {
-      "tags": [
-        "settings"
-      ]
+      "tags": ["settings"]
     },
     "shared": {
-      "tags": [
-        "shared"
-      ]
-    },
-    "admin": {
-      "tags": []
+      "tags": ["shared"]
     },
     "playground": {
       "tags": []
@@ -103,9 +76,10 @@
     },
     "ui-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "ui"
-      ]
+      "implicitDependencies": ["ui"]
+    },
+    "admin": {
+      "tags": []
     }
   }
 }
