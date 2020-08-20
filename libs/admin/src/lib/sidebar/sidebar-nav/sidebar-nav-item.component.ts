@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthFacade } from '@lowlandtech/auth';
 
 @Component({
   selector: 'scx-sidebar-nav-item',
@@ -18,19 +17,10 @@ import { AuthFacade } from '@lowlandtech/auth';
     </ng-template>
     `
 })
-export class SidebarNavItemComponent implements OnInit {
+export class SidebarNavItemComponent {
   @Input() item: any;
 
-  constructor( private router: Router, private authFacade: AuthFacade )  { }
-
-  ngOnInit(): void {
-    if (this.item.isUser) {
-      this.authFacade.user$.subscribe(user => {
-        this.item.name = user.username;
-        this.item.url = '/profile/' + user.username;
-      });
-    }
-  }
+  constructor( private router: Router )  { }
 
   public hasClass() {
     return this.item.class ? true : false

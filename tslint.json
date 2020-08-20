@@ -3,9 +3,6 @@
     "node_modules/@nrwl/workspace/src/tslint",
     "node_modules/codelyzer"
   ],
-  "linterOptions": {
-    "exclude": ["**/*"]
-  },
   "rules": {
     "arrow-return-shorthand": true,
     "callable-types": true,
@@ -66,8 +63,8 @@
         ]
       }
     ],
-    "directive-selector": [true, "attribute", "app", "camelCase"],
-    "component-selector": [true, "element", "app", "kebab-case"],
+    "directive-selector": [true, "attribute", "scx", "camelCase"],
+    "component-selector": [true, "element", "scx", "kebab-case"],
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,
     "no-input-rename": true,
