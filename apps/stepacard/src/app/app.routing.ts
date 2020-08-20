@@ -18,7 +18,7 @@ export const routes: Routes = [
       {
         path: 'home',
         loadChildren: () =>
-          import('@lowlandtech/home/src/lib/home.module').then(m => m.HomeModule)
+          import('@lowlandtech/home').then(m => m.HomeModule)
       },
       {
         path: 'dashboard',
@@ -30,33 +30,33 @@ export const routes: Routes = [
       {
         path: 'card/:slug',
         loadChildren: () =>
-          import('@lowlandtech/card/src/lib/card.module').then(m => m.CardModule)
+          import('@lowlandtech/card').then(m => m.CardModule)
       },
       {
         path: 'settings',
         loadChildren: () =>
-          import('@lowlandtech/settings/src/lib/settings.module').then(
+          import('@lowlandtech/settings').then(
             m => m.SettingsModule
           )
       },
       {
         path: 'editor',
         loadChildren: () =>
-          import('@lowlandtech/editor/src/lib/editor.module').then(
+          import('@lowlandtech/editor').then(
             m => m.EditorModule
           )
       },
       {
         path: 'profile/:username',
         loadChildren: () =>
-          import('@lowlandtech/profile/src/lib/profile.module').then(
+          import('@lowlandtech/profile').then(
             m => m.ProfileModule
           )
       },
       {
         path: 'playground',
         loadChildren: () =>
-          import('@lowlandtech/playground/src/lib/playground.module').then(
+          import('@lowlandtech/playground').then(
             m => m.PlaygroundModule
           )
       },

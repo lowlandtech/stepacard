@@ -1,5 +1,5 @@
 import { Action, createAction, props } from '@ngrx/store';
-import { Profile } from '@lowlandtech/api/src/lib/types';
+import { Profile } from '@lowlandtech/api';
 
 export const getProfile = createAction('[profile] GET_PROFILE', props<{ id: string }>());
 export const getProfileSuccess = createAction('[profile] GET_PROFILE_SUCCESS', props<{ profile: Profile }>());
