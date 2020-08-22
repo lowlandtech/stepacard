@@ -11,13 +11,13 @@
     "nx.json": "*"
   },
   "projects": {
-    "lowlandtech": {
+    "stepacard": {
       "tags": []
     },
-    "lowlandtech-e2e": {
+    "stepacard-e2e": {
       "tags": [],
       "implicitDependencies": [
-        "lowlandtech"
+        "stepacard"
       ]
     },
     "theme": {
