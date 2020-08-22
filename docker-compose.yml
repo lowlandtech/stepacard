@@ -12,8 +12,8 @@ services:
     build:
       context: .
     environment:
-    - VIRTUAL_HOST=stepacard.com
-    - LETSENCRYPT_HOST=stepacard.com
+    - VIRTUAL_HOST=app.stepacard.com
+    - LETSENCRYPT_HOST=app.stepacard.com
     - LETSENCRYPT_EMAIL=wmuntslag@live.nl
     restart: always
     expose:
