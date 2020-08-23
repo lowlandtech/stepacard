@@ -58,11 +58,10 @@ export function adminStateReducer(
   state: AdminState = initialAdminState,
   action: AdminStateAction
 ): AdminState {
-  const newState = {
-    ...state
-  };
   let group: AsideListGroupModel;
+  let groups: AsideListGroupModel[];
   let index: number;
+  let count: number;
 
   switch (action.type) {
     case AdminStateActionTypes.SidebarMaximized: {
@@ -127,27 +126,44 @@ export function adminStateReducer(
       };
     }
     case AdminStateActionTypes.AsideListGroupAdd:
-      group = newState.aside.groups.find(
+      groups = [...state.aside.groups];
+      group = groups.find(
         _group => _group.title === action.payload.title
       );
-      index = newState.aside.groups.indexOf(group);
+      
+      index = groups.indexOf(group);
 
       if (index !== -1) {
-        newState.aside.groups[index] = action.payload;
+        groups[index] = action.payload;
       } else {
-        newState.aside.groups.push(action.payload);
+        groups.push(action.payload);
       }
 
-      newState.aside.groupCount = newState.aside.groups.length;
-      return newState;
+      count = groups.length;
+      return {
+        ...state,
+        aside: {
+          ...state.aside,
+          groups: groups,
+          groupCount: count
+        }
+      };
     case AdminStateActionTypes.AsideListGroupRemove:
-      group = newState.aside.groups.find(
+      groups = [...state.aside.groups];
+      group = groups.find(
         _group => _group.title === action.payload
       );
-      index = newState.aside.groups.indexOf(group);
-      newState.aside.groups.splice(index, 1);
-      newState.aside.groupCount = newState.aside.groups.length;
-      return newState;
+      index = groups.indexOf(group);
+      groups.splice(index, 1);
+      count = groups.length;
+      return {
+        ...state,
+        aside: {
+          ...state.aside,
+          groups: groups,
+          groupCount: count
+        }
+      };
     default: {
       return state;
     }
