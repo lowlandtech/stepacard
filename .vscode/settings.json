@@ -12,6 +12,8 @@
     "**/test-setup.ts": true,
     "**/tsconfig*.json": true,
     "**/tslint.json": true,
+    "apps/**/browserslist": true,
+    "apps/**/src/typings.d.ts": true,
     "decorate-angular-cli.js": true,
     "jest.config.js": true,
     "libs/**/ng-package.json": true,
@@ -20,8 +22,6 @@
     "nginx": true,
     "node_modules": true,
     "package-lock.json": true,
-    "tools": true,
-    "apps\\stepacard\\browserslist": true,
-    "apps\\stepacard\\src\\typings.d.ts": true
+    "tools": true
   }
 }
